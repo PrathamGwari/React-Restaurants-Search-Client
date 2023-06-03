@@ -8,9 +8,6 @@ function Provider({ children }) {
 
   const fetchRestaurants = useCallback(async (searchTerm, place) => {
     const response = await axios.get('/search', {
-      headers: {
-        Authorization: process.env.REACT_APP_TOKEN
-      },
       params: {
         term: searchTerm,
         location: place,
